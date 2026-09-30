@@ -114,6 +114,22 @@ def bg_islamic_teal(size, seed=None):
     return _draw_geometric_lattice(img, color=(214, 175, 105), opacity=26)
 
 
+def bg_party_confetti(size, seed=None):
+    img = engine.multi_stop_gradient(
+        size, [(0.0, (255, 143, 171)), (0.45, (208, 97, 183)), (1.0, (86, 58, 148))], angle=105,
+    )
+    img = engine.add_bokeh_blobs(
+        img, count=20,
+        color_palette=[(255, 214, 120), (255, 255, 255), (140, 230, 210), (255, 160, 190)],
+        seed=seed, min_r=0.03, max_r=0.11, opacity=(35, 90),
+    )
+    img = img.filter(ImageFilter.GaussianBlur(1.2))
+    img = engine.add_top_sheen(img, opacity=22)
+    img = engine.add_film_grain(img, amount=6, seed=seed)
+    img = engine.add_vignette(img, strength=0.4)
+    return img
+
+
 def _draw_geometric_lattice(img, color, opacity):
     w, h = img.size
     overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
@@ -196,7 +212,22 @@ THEMES = {
         background=bg_islamic_teal,
         keywords=("alloh", "qur'on", "hazrat", "iymon", "diyonat", "savob", "payg'ambar"),
     ),
+    "party_confetti": Theme(
+        key="party_confetti", label="TUG'ILGAN KUN",
+        quote_font=f"{FONT_DIR}/Lora-Bold.ttf", quote_italic=False,
+        author_font=f"{FONT_DIR}/Outfit-Regular.ttf",
+        accent=(255, 244, 214), text_color=(255, 250, 250), author_color=(255, 224, 173),
+        chip_bg=(255, 255, 255),
+        background=bg_party_confetti,
+        keywords=("tug'ilgan kun", "tug'ilgan kuningiz", "tavallud", "yosh kuningiz"),
+    ),
 }
+
+
+# Occasion-specific themes (party, religious) must be earned by an explicit
+# keyword or icon match - never handed out as a random fallback, or a plain
+# proverb could land on birthday confetti by chance.
+_RANDOM_FALLBACK_KEYS = ("midnight_gold", "warm_sunset", "emerald_garden", "pearl_paper", "marble")
 
 
 def pick_theme(text, rng=None):
@@ -205,7 +236,8 @@ def pick_theme(text, rng=None):
     for theme in THEMES.values():
         if any(kw in lowered for kw in theme.keywords):
             return theme
-    return rng.choice(list(THEMES.values()))
+    pool = [THEMES[k] for k in _RANDOM_FALLBACK_KEYS]
+    return rng.choice(pool)
 
 
 def theme_by_key(key):

@@ -3,7 +3,7 @@ import random
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-from . import layout
+from . import icons, layout
 from .themes import THEMES, pick_theme, theme_by_key
 
 FONT_DIR = __file__.rsplit("/", 1)[0] + "/fonts"
@@ -56,6 +56,20 @@ def _draw_quote_mark(base, size, accent, y_ratio):
     d.text((w / 2, h * y_ratio), "“", font=font, fill=(*accent, 70), anchor="mm")
 
 
+def _draw_icon_badge(base, size, icon_key, accent, y_ratio=0.205):
+    """A ringed badge with a line-art icon, so the phrase's meaning reads at a
+    glance before the text is even read."""
+    w, h = size
+    cx, cy = w / 2, h * y_ratio
+    ring_r = h * 0.052
+    d = ImageDraw.Draw(base)
+    d.ellipse([cx - ring_r, cy - ring_r, cx + ring_r, cy + ring_r], outline=(*accent, 200), width=2)
+    icon_tile = icons.render_icon(icon_key, accent)
+    icon_size = int(ring_r * 1.35)
+    icon_tile = icon_tile.resize((icon_size, icon_size), Image.LANCZOS)
+    base.alpha_composite(icon_tile, (int(cx - icon_size / 2), int(cy - icon_size / 2)))
+
+
 def _draw_divider(base, size, accent, y):
     w, h = size
     d = ImageDraw.Draw(base)
@@ -74,14 +88,51 @@ def _draw_watermark(base, size, color, text="Kichkina tabib • t.me/yordamchiag
     d.text((w / 2, h * 0.965), text, font=font, fill=(*color, 130), anchor="mm")
 
 
+_SCATTER_SLOTS = (
+    (0.135, 0.10, 0.8, 200),
+    (0.865, 0.085, 0.65, 180),
+    (0.87, 0.40, 0.95, 235),
+    (0.11, 0.44, 0.8, 220),
+)
+
+
+def _draw_scene_scatter(base, size, accent, scatter_keys, seed=None):
+    """Places a small handful of accent icons around the frame corners so the
+    card reads as a little scene (e.g. cake + fireworks + flowers for a
+    birthday) rather than a single lonely badge. Works for any occasion that
+    declares scatter icons in icons.scatter_for()."""
+    if not scatter_keys:
+        return
+    rng = random.Random(seed)
+    w, h = size
+    slots = list(_SCATTER_SLOTS)
+    rng.shuffle(slots)
+    for (x_r, y_r, scale, alpha), key in zip(slots, scatter_keys * 2):
+        x, y = w * x_r, h * (y_r if h <= w else y_r * 0.92)
+        tile = icons.render_icon(key, accent)
+        s = max(1, int(h * 0.085 * scale))
+        tile = tile.resize((s, s), Image.LANCZOS)
+        a = tile.split()[3].point(lambda p, alpha=alpha: int(p * alpha / 255))
+        tile.putalpha(a)
+        jitter = int(h * 0.01)
+        ox, oy = rng.randint(-jitter, jitter), rng.randint(-jitter, jitter)
+        base.alpha_composite(tile, (int(x - s / 2) + ox, int(y - s / 2) + oy))
+
+
 def compose_card(text, author=None, theme=None, size=(1080, 1080), seed=None,
                   category_label=None, watermark=True):
     """Build one finished card. theme: Theme object, theme key string, or None (auto-pick)."""
     rng = random.Random(seed)
+    # Author often carries the strongest signal ("Hazrat Ali", "Xalq maqoli") -
+    # match icon/theme keywords against text and author together.
+    match_text = f"{text} {author or ''}"
+    icon_key = icons.pick_icon_key(match_text)
+
     if theme is None:
-        theme = pick_theme(text, rng)
+        mapped = icons.ICON_THEME_MAP.get(icon_key)
+        theme = theme_by_key(mapped) if mapped else pick_theme(match_text, rng)
     elif isinstance(theme, str):
-        theme = theme_by_key(theme) or pick_theme(text, rng)
+        theme = theme_by_key(theme) or pick_theme(match_text, rng)
 
     bg = theme.background(size, seed=seed)
     base = bg.convert("RGBA")
@@ -89,7 +140,12 @@ def compose_card(text, author=None, theme=None, size=(1080, 1080), seed=None,
 
     label = category_label or theme.label
     _draw_chip(base, size, label, theme.accent, theme.text_color)
-    _draw_quote_mark(base, size, theme.accent, y_ratio=0.225)
+
+    if icon_key:
+        _draw_icon_badge(base, size, icon_key, theme.accent)
+        _draw_scene_scatter(base, size, theme.accent, icons.scatter_for(icon_key), seed=seed)
+    else:
+        _draw_quote_mark(base, size, theme.accent, y_ratio=0.225)
 
     margin_x = int(w * 0.135)
     top_bound = h * 0.30
