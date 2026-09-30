@@ -3,7 +3,7 @@ import random
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-from . import icons, layout
+from . import editorial, icons, layout, occasions
 from .themes import THEMES, pick_theme, theme_by_key
 
 FONT_DIR = __file__.rsplit("/", 1)[0] + "/fonts"
@@ -119,8 +119,8 @@ def _draw_scene_scatter(base, size, accent, scatter_keys, seed=None):
         base.alpha_composite(tile, (int(x - s / 2) + ox, int(y - s / 2) + oy))
 
 
-def compose_card(text, author=None, theme=None, size=(1080, 1080), seed=None,
-                  category_label=None, watermark=True):
+def compose_card_classic(text, author=None, theme=None, size=(1080, 1080), seed=None,
+                          category_label=None, watermark=True):
     """Build one finished card. theme: Theme object, theme key string, or None (auto-pick)."""
     rng = random.Random(seed)
     # Author often carries the strongest signal ("Hazrat Ali", "Xalq maqoli") -
@@ -191,12 +191,24 @@ def compose_card(text, author=None, theme=None, size=(1080, 1080), seed=None,
     return base.convert("RGB")
 
 
-def compose_status(text, author=None, theme=None, seed=None, category_label=None):
-    """Vertical 1080x1920 story/status format - same language, taller safe area."""
-    return compose_card(
-        text, author=author, theme=theme, size=(1080, 1920), seed=seed,
-        category_label=category_label,
+def compose_card(text, author=None, size=(1080, 1350), seed=None):
+    """Editorial-style card (default): asymmetric layout, organic floral
+    illustration, magazine typography - auto-picked to match the phrase's
+    occasion (birthday, love, wisdom, religious, ...)."""
+    rng = random.Random(seed)
+    match_text = f"{text} {author or ''}"
+    icon_key = icons.pick_icon_key(match_text)
+    palette, eyebrow, headline, tagline = occasions.resolve(icon_key)
+    anchor = "bl" if rng.random() < 0.5 else "br"
+    return editorial.compose_editorial(
+        text, author=author, palette=palette, size=size, seed=seed,
+        eyebrow=eyebrow, headline=headline, tagline=tagline, anchor=anchor,
     )
+
+
+def compose_status(text, author=None, seed=None):
+    """Vertical 1080x1920 story/status format - same editorial language, taller canvas."""
+    return compose_card(text, author=author, size=(1080, 1920), seed=seed)
 
 
 def list_theme_keys():

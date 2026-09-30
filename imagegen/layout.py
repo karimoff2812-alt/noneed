@@ -62,11 +62,15 @@ def draw_text_with_shadow(draw, xy, text, font, fill, anchor="mm",
 
 
 def draw_tracked_text(draw, xy, text, font, fill, tracking=4, anchor_h="m"):
-    """Manual letter-spacing (PIL has no native tracking) - used for small-caps labels."""
+    """Manual letter-spacing (PIL has no native tracking) - used for small-caps
+    labels. anchor_h: 'l' (left, default start), 'm' (centered on x), 'r'
+    (text ends at x)."""
     total_w = sum(draw.textlength(ch, font=font) + tracking for ch in text) - tracking
     x, y = xy
     if anchor_h == "m":
         x -= total_w / 2
+    elif anchor_h == "r":
+        x -= total_w
     cursor = x
     for ch in text:
         draw.text((cursor, y), ch, font=font, fill=fill, anchor="lm")
