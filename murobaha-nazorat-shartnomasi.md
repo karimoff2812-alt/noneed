@@ -133,7 +133,7 @@ c) **To'lovlar bo'yicha axborot berish** — Murobaha bitimi bo'yicha Xaridordan
 
 ## 6. JAVOBGARLIK
 
-6.1. Ijrochi 3-bo'limda belgilangan xabarni muddatida yubormasa, har bir kechiktirilgan xabar uchun shu konteyner xizmat haqidan **10 AQSh dollari** chegiriladi, lekin bitta konteyner bo'yicha jami chegirma **100 AQSh dollari**dan oshmaydi.
+6.1. Ijrochi 3-bo'limda belgilangan xabarni o'z aybi bilan muddatida yubormasa (6.4–6.5-bandlar hisobga olingan holda), har bir kechiktirilgan xabar uchun shu konteyner xizmat haqidan **10 AQSh dollari** chegiriladi, lekin bitta konteyner bo'yicha jami chegirma **100 AQSh dollari**dan oshmaydi.
 
 6.2. Buyurtmachi xizmat haqini 4.3-banddagi muddatda to'lamasa, har bir kechiktirilgan kun uchun to'lanmagan summaning **0,5 %** miqdorida penya to'laydi, lekin u to'lanmagan summaning **20 %** idan oshmaydi.
 
@@ -143,7 +143,17 @@ c) **To'lovlar bo'yicha axborot berish** — Murobaha bitimi bo'yicha Xaridordan
 - c) Buyurtmachi bergan noto'g'ri yoki to'liq bo'lmagan ma'lumot asosida qilingan hisob-kitob xatolari;
 - d) tovar sifati, miqdori va narxi.
 
-6.4. Fors-major holatlar (tabiiy ofat, urush, davlat organlarining taqiqlari, aloqa tarmog'ining umumiy uzilishi va h.k.) davrida Tomonlar majburiyatlarni bajarmagani uchun javobgar emas. Bunday holat haqida ikkinchi Tomonga **3 kun** ichida xabar beriladi.
+6.4. **Kechikkan, noto'g'ri yoki noaniq ma'lumot uchun javobgarlik yo'qligi.** Ijrochi o'z xabar va hisob-kitoblarini Buyurtmachi, Xaridor, Yetkazib beruvchi, tashuvchi, ekspeditor, bojxona, bank va kuzatuv tizimlaridan (keyingi o'rinlarda — **«Manbalar»**) olingan ma'lumotlar asosida tayyorlaydi. Shu sababli:
+- a) Manbalardan ma'lumot **kechikib kelsa**, Ijrochining 3-bo'limdagi barcha xabar berish muddatlari ma'lumot Ijrochiga haqiqatda yetib kelgan paytdan boshlab hisoblanadi. Bunday holda xabarning kechikishi Ijrochining aybi hisoblanmaydi va 6.1-banddagi chegirma qo'llanilmaydi;
+- b) Manbalardan kelgan ma'lumot **noto'g'ri** bo'lsa (sana, summa, konteyner raqami, joylashuv, ETA va h.k.), Ijrochi shu ma'lumot asosida yuborgan xabar yoki hisob-kitobning noto'g'riligi va undan kelib chiqqan har qanday zarar (shu jumladan boy berilgan foyda) uchun javobgar emas;
+- c) Ma'lumot **noaniq, to'liq bo'lmagan yoki bir-biriga zid** bo'lsa, Ijrochi buni xabarda ko'rsatadi («tasdiqlanmagan», «taxminiy» va h.k.) va Buyurtmachidan yoki tegishli Manbadan aniqlik so'raydi. Aniq ma'lumot olinguniga qadar Ijrochi bunday ma'lumot oqibatlari uchun javobgar emas;
+- d) Ijrochi Manbalardan olingan ma'lumotning haqqoniyligini mustaqil tekshirish majburiyatini olmaydi. U faqat ma'lumotni olingan holida, manbasini ko'rsatib yetkazadi;
+- e) Ijrochi o'zi aniqlagan xato yoki noaniqlik haqida bilgan paytdan boshlab **24 soat** ichida Buyurtmachiga xabar beradi va to'g'ri ma'lumot kelgach, xabar yoki hisob-kitobni **1 ish kuni** ichida tuzatadi. Bu majburiyat bajarilgan bo'lsa, Ijrochiga hech qanday chegirma yoki jarima qo'llanilmaydi;
+- f) Yuqoridagi holatlar Ijrochining xizmat haqini (4-bo'lim) kamaytirish yoki to'lamaslik uchun asos bo'lmaydi.
+
+6.5. Ijrochi faqat Manbadan **to'g'ri va o'z vaqtida** olgan ma'lumotni o'z aybi bilan kechiktirgan yoki noto'g'ri yetkazgan hollardagina 6.1-band bo'yicha javob beradi.
+
+6.6. Fors-major holatlar (tabiiy ofat, urush, davlat organlarining taqiqlari, aloqa tarmog'ining umumiy uzilishi va h.k.) davrida Tomonlar majburiyatlarni bajarmagani uchun javobgar emas. Bunday holat haqida ikkinchi Tomonga **3 kun** ichida xabar beriladi.
 
 ---
 
