@@ -6,7 +6,7 @@
 
 ---
 
-**Buyurtmachi:** ______________________________________ (F.I.Sh.),
+**Buyurtmachi:** **Yusupov Rustam** ______________ (otasining ismi),
 pasport: ______ № __________, berilgan: ______________ (kim tomonidan, qachon),
 JShShIR: ______________, manzil: ______________________________,
 telefon: ______________ (keyingi o'rinlarda — **«Buyurtmachi»**)
@@ -24,7 +24,7 @@ birgalikda **«Tomonlar»** deb ataladi, ushbu shartnomani quyidagilar haqida tu
 
 1.1. **Murobaha bitimi** — Buyurtmachi va Xaridor(lar) o'rtasida tuzilgan (tuziladigan), tovarni ustama (foyda) qo'shilgan narxda, to'lovni muddatini kechiktirib yoki bo'lib-bo'lib to'lash sharti bilan sotish to'g'risidagi shartnoma(lar). Ijrochi ushbu bitimning tarafi emas.
 
-1.2. **Xaridor** — Murobaha bitimi bo'yicha tovarni sotib oluvchi shaxs(lar) (Buyurtmachining tanishlari): ______________________________________.
+1.2. **Xaridor** — Murobaha bitimi bo'yicha tovarni sotib oluvchi shaxs(lar) (Buyurtmachining tanishi): **Nodir** ______________ (familiyasi, otasining ismi), pasport: ______ № __________, telefon: ______________.
 
 1.3. **Yetkazib beruvchi** — tovar buyurtma qilinadigan (sotib olinadigan) shaxs: ______________________________________.
 
@@ -208,7 +208,7 @@ c) **To'lovlar bo'yicha axborot berish** — Murobaha bitimi bo'yicha Xaridordan
 
 | Buyurtmachi | Ijrochi |
 |---|---|
-| F.I.Sh.: ______________________ | F.I.Sh.: ______________________ |
+| F.I.Sh.: Yusupov Rustam ______________ | F.I.Sh.: ______________________ |
 | Imzo: _________________ | Imzo: _________________ |
 | Sana: «___» ________ 20___ y. | Sana: «___» ________ 20___ y. |
 
@@ -227,7 +227,7 @@ c) **To'lovlar bo'yicha axborot berish** — Murobaha bitimi bo'yicha Xaridordan
 
 ## 2-ILOVA. XARIDOR TO'LOVLARI JADVALI
 
-**Konteyner №:** ____________ **Xaridor:** ______________________
+**Konteyner №:** ____________ **Xaridor:** Nodir ______________
 **Tovarning tannarxi:** ____________ **Ustama:** ____________ **Murobaha umumiy narxi:** ____________ **Valyuta:** ______
 
 | № | To'lov sanasi | To'lanishi kerak | Haqiqatda to'landi | To'langan sana | Qoldiq qarz | Izoh |
@@ -267,5 +267,5 @@ Ijrochi Buyurtmachiga quyidagi konteyner(lar) bo'yicha shartnomaning 2-bo'limida
 
 Buyurtmachining xizmat sifati va muddatiga e'tirozi yo'q. Xizmat haqi ______ $ (______ so'm, kurs: ______) to'liq to'landi.
 
-| Buyurtmachi: ______________ / imzo | Ijrochi: ______________ / imzo |
+| Buyurtmachi: Yusupov R. ______________ / imzo | Ijrochi: ______________ / imzo |
 |---|---|
