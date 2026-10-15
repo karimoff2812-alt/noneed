@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1300" viewBox="0 0 1000 1300">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb2e5"/><stop offset="1" stop-color="#d9ecf7"/>
+    </linearGradient>
+    <linearGradient id="mt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f8a78"/><stop offset="1" stop-color="#3f6b46"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1300" fill="url(#sky)"/>
+  <!-- clouds -->
+  <g fill="#fff" opacity="0.92">
+    <ellipse cx="200" cy="260" rx="120" ry="40"/><ellipse cx="270" cy="230" rx="80" ry="45"/><ellipse cx="140" cy="240" rx="60" ry="35"/>
+    <ellipse cx="760" cy="330" rx="170" ry="50"/><ellipse cx="840" cy="295" rx="90" ry="50"/><ellipse cx="680" cy="305" rx="70" ry="40"/>
+    <ellipse cx="520" cy="200" rx="90" ry="28"/>
+  </g>
+  <!-- banner -->
+  <rect x="150" y="40" width="700" height="90" rx="45" fill="#ffd166" stroke="#3d2b1f" stroke-width="5"/>
+  <text x="500" y="100" text-anchor="middle" font-family="DejaVu Sans, Arial" font-weight="bold" font-size="40" fill="#3d2b1f">Tog'lar, futbol va bolajonlar</text>
+  <!-- mountains -->
+  <path d="M0,720 L180,600 L300,660 L470,540 L560,520 L700,470 L860,440 L1000,470 L1000,1150 L0,1150 Z" fill="#8fa49a"/>
+  <path d="M0,780 L150,700 L320,740 L500,660 L680,600 L850,580 L1000,620 L1000,1150 L0,1150 Z" fill="url(#mt)"/>
+  <path d="M700,470 L860,440 L1000,470 L1000,500 L860,470 Z" fill="#c9d3cf"/>
+  <!-- valley + sanatorium -->
+  <path d="M560,960 Q700,820 1000,800 L1000,1150 L560,1150 Z" fill="#7cbf5a"/>
+  <rect x="770" y="830" width="170" height="60" rx="25" fill="#f4f4f4" stroke="#9aa" stroke-width="2"/>
+  <g stroke="#9ab" stroke-width="3"><line x1="780" y1="848" x2="930" y2="848"/><line x1="780" y1="862" x2="930" y2="862"/><line x1="780" y1="876" x2="930" y2="876"/></g>
+  <!-- trees -->
+  <g fill="#2f5d3a">
+    <path d="M60,900 L110,620 L160,900 Z"/><path d="M120,900 L170,680 L220,900 Z"/>
+    <path d="M880,940 L910,820 L940,940 Z"/><path d="M930,940 L955,850 L980,940 Z"/>
+  </g>
+  <!-- bushes with yellow flowers -->
+  <g fill="#5d8a3a">
+    <ellipse cx="90" cy="1020" rx="160" ry="110"/><ellipse cx="930" cy="1050" rx="150" ry="100"/>
+  </g>
+  <g fill="#f6d02f">
+    <circle cx="40" cy="980" r="8"/><circle cx="90" cy="950" r="7"/><circle cx="140" cy="1000" r="8"/><circle cx="60" cy="1040" r="7"/><circle cx="180" cy="960" r="6"/><circle cx="20" cy="1060" r="7"/>
+    <circle cx="880" cy="1010" r="7"/><circle cx="940" cy="990" r="8"/><circle cx="975" cy="1040" r="7"/><circle cx="900" cy="1070" r="6"/><circle cx="850" cy="1050" r="7"/>
+  </g>
+  <!-- rocky ground -->
+  <path d="M0,1120 Q500,1090 1000,1120 L1000,1300 L0,1300 Z" fill="#c9ab88"/>
+  <g fill="#a88a6a"><ellipse cx="120" cy="1250" rx="22" ry="10"/><ellipse cx="380" cy="1270" rx="16" ry="8"/><ellipse cx="640" cy="1255" rx="20" ry="9"/><ellipse cx="900" cy="1240" rx="18" ry="9"/></g>
+
+  <!-- ===== DAD ===== -->
+  <!-- pants -->
+  <path d="M395,880 L605,880 L612,1170 L512,1170 L500,960 L488,1170 L388,1170 Z" fill="#3c3f45" stroke="#222" stroke-width="3"/>
+  <path d="M398,920 L392,1165 M602,920 L608,1165" stroke="#8a8f96" stroke-width="5"/>
+  <ellipse cx="438" cy="1180" rx="58" ry="22" fill="#8b6a4f" stroke="#3d2b1f" stroke-width="3"/>
+  <ellipse cx="562" cy="1180" rx="58" ry="22" fill="#8b6a4f" stroke="#3d2b1f" stroke-width="3"/>
+  <!-- arms -->
+  <path d="M368,740 Q352,840 352,930" stroke="#e3b08a" stroke-width="36" stroke-linecap="round" fill="none"/>
+  <path d="M632,740 Q648,840 648,930" stroke="#e3b08a" stroke-width="36" stroke-linecap="round" fill="none"/>
+  <!-- jacket over shoulder -->
+  <path d="M590,665 Q660,650 670,700 L690,860 Q660,880 640,850 L620,720 Z" fill="#1d1d22"/>
+  <!-- t-shirt -->
+  <path d="M440,650 L560,650 L640,690 L660,770 L610,780 L605,900 L395,900 L390,780 L340,770 L360,690 Z" fill="#ffffff" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M465,652 Q500,690 535,652" fill="#e3b08a" stroke="#333" stroke-width="3"/>
+  <!-- head -->
+  <rect x="475" y="620" width="50" height="45" fill="#d9a47c"/>
+  <ellipse cx="395" cy="525" rx="22" ry="32" fill="#e3b08a" stroke="#333" stroke-width="3"/>
+  <ellipse cx="605" cy="525" rx="22" ry="32" fill="#e3b08a" stroke="#333" stroke-width="3"/>
+  <ellipse cx="500" cy="515" rx="108" ry="128" fill="#e8b98f" stroke="#333" stroke-width="4"/>
+  <path d="M410,590 Q500,700 590,590 Q585,640 500,645 Q415,640 410,590 Z" fill="#6b4a3a" opacity="0.35"/>
+  <path d="M392,500 Q380,375 500,378 Q625,372 608,500 Q596,430 520,428 Q470,445 440,425 Q405,440 392,500 Z" fill="#2b211c"/>
+  <path d="M440,478 Q462,466 482,476" stroke="#2b211c" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M518,476 Q538,466 560,478" stroke="#2b211c" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <ellipse cx="462" cy="508" rx="14" ry="11" fill="#fff"/><circle cx="464" cy="509" r="7" fill="#2b211c"/>
+  <ellipse cx="538" cy="508" rx="14" ry="11" fill="#fff"/><circle cx="540" cy="509" r="7" fill="#2b211c"/>
+  <path d="M500,515 Q488,560 500,568 Q512,568 515,560" stroke="#a06a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M455,592 Q500,625 545,592" stroke="#7a3b2e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="430" cy="570" rx="16" ry="9" fill="#e88" opacity="0.4"/><ellipse cx="570" cy="570" rx="16" ry="9" fill="#e88" opacity="0.4"/>
+
+  <!-- ===== KID template ===== -->
+  <defs><g id="kid">
+    <!-- legs -->
+    <rect x="-30" y="190" width="22" height="70" fill="#e0ab84"/><rect x="8" y="190" width="22" height="70" fill="#e0ab84"/>
+    <ellipse cx="-20" cy="262" rx="24" ry="10" fill="#4a3f38"/><ellipse cx="20" cy="262" rx="24" ry="10" fill="#4a3f38"/>
+    <!-- shorts -->
+    <path d="M-52,140 L52,140 L56,200 L4,200 L0,180 L-4,200 L-56,200 Z" fill="#1f4d47" stroke="#123" stroke-width="3"/>
+    <!-- shirt -->
+    <path d="M-30,75 L30,75 L72,100 L82,140 L52,145 L54,150 L-54,150 L-52,145 L-82,140 L-72,100 Z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="-34" y="88" width="68" height="40" rx="6" fill="#8ecae6"/>
+    <circle cx="-8" cy="100" r="8" fill="#e0ab84"/><path d="M-20,128 Q-8,108 4,128 Z" fill="#4b8fc7"/>
+    <circle cx="14" cy="106" r="7" fill="#fff" stroke="#c33" stroke-width="2"/>
+    <text x="22" y="99" font-family="DejaVu Sans, Arial" font-weight="bold" font-size="12" fill="#f4a020">45</text>
+    <text x="0" y="142" text-anchor="middle" font-family="DejaVu Sans, Arial" font-weight="bold" font-size="11" fill="#1d3557">ABDUQODIR</text>
+    <!-- head -->
+    <ellipse cx="-74" cy="0" rx="14" ry="20" fill="#e0ab84" stroke="#333" stroke-width="3"/>
+    <ellipse cx="74" cy="0" rx="14" ry="20" fill="#e0ab84" stroke="#333" stroke-width="3"/>
+    <ellipse cx="0" cy="0" rx="76" ry="80" fill="#e8b48c" stroke="#333" stroke-width="3"/>
+    <path d="M-74,-10 Q-76,-82 0,-82 Q76,-82 74,-10 Q60,-50 0,-52 Q-60,-50 -74,-10 Z" fill="#3b2d26" opacity="0.85"/>
+    <ellipse cx="-24" cy="-2" rx="11" ry="12" fill="#fff"/><circle cx="-23" cy="0" r="7" fill="#1e1612"/><circle cx="-21" cy="-3" r="2" fill="#fff"/>
+    <ellipse cx="24" cy="-2" rx="11" ry="12" fill="#fff"/><circle cx="25" cy="0" r="7" fill="#1e1612"/><circle cx="27" cy="-3" r="2" fill="#fff"/>
+    <path d="M-34,-22 Q-24,-28 -12,-22 M12,-22 Q24,-28 34,-22" stroke="#3b2d26" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M-3,10 Q0,22 6,20" stroke="#a06a4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="40" rx="11" ry="8" fill="#9b3d36"/>
+    <ellipse cx="-44" cy="24" rx="12" ry="7" fill="#f08a8a" opacity="0.5"/><ellipse cx="44" cy="24" rx="12" ry="7" fill="#f08a8a" opacity="0.5"/>
+  </g></defs>
+  <!-- kid arms (to dad's hands) -->
+  <path d="M332,995 Q345,960 352,935" stroke="#e0ab84" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <path d="M668,995 Q655,960 648,935" stroke="#e0ab84" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <path d="M205,995 Q195,1040 200,1070" stroke="#e0ab84" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <path d="M795,995 Q805,1040 800,1070" stroke="#e0ab84" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <use href="#kid" transform="translate(270,915)"/>
+  <use href="#kid" transform="translate(730,905)"/>
+  <!-- dad hands -->
+  <circle cx="352" cy="935" r="20" fill="#e3b08a" stroke="#333" stroke-width="3"/>
+  <circle cx="648" cy="935" r="20" fill="#e3b08a" stroke="#333" stroke-width="3"/>
+  <!-- football -->
+  <g transform="translate(500,1240)">
+    <circle r="38" fill="#fff" stroke="#222" stroke-width="4"/>
+    <path d="M0,-14 L13,-4 L8,12 L-8,12 L-13,-4 Z" fill="#222"/>
+    <path d="M0,-14 L0,-38 M13,-4 L35,-12 M8,12 L22,30 M-8,12 L-22,30 M-13,-4 L-35,-12" stroke="#222" stroke-width="3"/>
+  </g>
+</svg>
